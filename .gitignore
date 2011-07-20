@@ -1,0 +1,3 @@
+tmp/*
+db/test_development.db
+test/uploads/*
