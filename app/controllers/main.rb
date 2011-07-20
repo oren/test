@@ -8,8 +8,11 @@ Test.controller do
     end
     STDERR.puts "Uploading file, original name #{name.inspect}"
     begin
-      f =  File.open('local_filename.jpg', 'w')
+      
+      f =  File.open('local_filename.jpg', 'wb')
       while blk = tmpfile.read(65536)
+        # Mac OS X has an Encoding issue and so we use the .encode method for OS X
+        blk.encode("UTF-8", :invalid => :replace, :undef => :replace, :replace => "?")
         # here you would write it to its final location
         f.write(blk)
       end
