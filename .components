@@ -1,5 +1,5 @@
 --- 
-:orm: none
+:orm: sequel
 :stylesheet: none
 :script: none
 :renderer: haml

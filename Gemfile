@@ -7,7 +7,10 @@ gem 'thin' # or mongrel
 
 # Component requirements
 gem 'haml'
-
+gem 'sqlite3-ruby'
+gem 'sequel'
+gem 'carrierwave'
+gem 'carrierwave-sequel', :require => 'carrierwave/sequel'
 # Test requirements
 
 
