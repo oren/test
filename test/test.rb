@@ -7,14 +7,14 @@ require '../config/boot.rb'
 class TestManualBadgeType < MiniTest::Unit::TestCase
   include Rack::Test::Methods
 
-  FILE2UPLOAD  = "/home/oren/repos/respawnproject/respawnsv00/badge_service/test/controllers/pink-pony.jpg"
-  UPLOADEDFILE = "/home/oren/padrino-test/test/test/uploads/pink-pony.jpg"
+  FILE2UPLOAD  = "/Users/jimbarcelona/pink-pony.jpg"
+  UPLOADEDFILE = "/Users/jimbarcelona/repos/oren/forks/test/test/pink-pony.jpg"
 
   def app() Test end
 
   def setup
-    if File.exist?("/home/oren/padrino-test/test/test/uploads/pink-pony.jpg")
-      File.delete("/home/oren/padrino-test/test/test/uploads/pink-pony.jpg")
+    if File.exist?(UPLOADEDFILE)
+      File.delete(UPLOADEDFILE)
     end
   end
 

@@ -12,7 +12,11 @@ gem 'sequel'
 gem 'carrierwave'
 gem 'carrierwave-sequel', :require => 'carrierwave/sequel'
 # Test requirements
-
+gem 'minitest'
+gem 'rack-test'
+gem 'guard-minitest' # autotest
+gem 'rb-fsevent'
+gem 'growl'
 
 # Padrino
 gem 'padrino', "0.9.23"
